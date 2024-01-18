@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.banus.quizbanusalman.MainActivity">
+
+
+    <TextView
+        android:id="@+id/judul_pertama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz SIM C"
+        android:textStyle="bold"
+        android:textSize="15pt"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="100dp"
+        />
+
+    <Button
+        android:id="@+id/btn_mulai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MULAI"
+        android:textStyle="bold"
+        android:textSize="10pt"
+        android:layout_below="@id/judul_pertama"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:onClick="goQuizPertama"/>
+
+    <Button
+        android:id="@+id/btn_petunjuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PETUNJUK"
+        android:textStyle="bold"
+        android:textSize="10pt"
+        android:layout_below="@id/btn_mulai"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:onClick="goPetunjuk"
+        />
+
+    <!--
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Coba Tekan Back Pada "
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="189dp" />
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Perangkat Android Kalian" android:id="@+id/textView2"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+     -->
+
+
+</RelativeLayout>

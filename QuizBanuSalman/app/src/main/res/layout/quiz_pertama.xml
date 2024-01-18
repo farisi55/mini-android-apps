@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.banus.quizbanusalman.QuizPertama">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="SOAL PERTAMA" />
+
+        <TextView
+
+            android:id="@+id/soal_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:gravity="fill"
+            android:layout_margin="8dp"
+            android:text="1. Apa yang harus dilakukan pengemudi kendaraan
+    bermotor jika melihat pejalan kaki hendak
+    menyeberang di Zebra-cross?"
+            android:textSize="7pt" />
+        
+        <RadioGroup
+            android:id="@+id/radio_group1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/option_a"
+                android:layout_margin="5dp"
+                android:text="Memperlambat kendaraan jika perlu berhenti dan mendahulukan pejalan kaki untuk menyeberang "/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/option_b"
+                android:layout_margin="5dp"
+                android:text="Membunyikan klakson supaya pejalan kaki berhati-hati "/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/option_c"
+                android:text="Memperlambat kendaraan supaya pejalan kaki cepat-cepat menyeberang "/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent">
+        <Button
+            android:id="@+id/btn_petunjuk"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Petunjuk"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="50pt"
+            android:layout_marginLeft="20pt"
+            android:onClick="goPetunjuk"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Next"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="50pt"
+            android:layout_marginRight="20pt"
+            android:onClick="goNext"/>
+
+        <!--
+        <Button
+            android:id="@+id/btn_cek_jawaban"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Jawaban"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="50pt"
+            android:layout_marginRight="20pt"
+            android:onClick="goCheck"/>
+
+          -->
+    </RelativeLayout>
+
+
+</LinearLayout>

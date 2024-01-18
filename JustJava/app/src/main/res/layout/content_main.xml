@@ -11,46 +11,49 @@
     tools:showIn="@layout/activity_main">
 
     <EditText
+        android:id="@+id/edit_text_name"
         android:hint="@string/description_name"
         android:inputType="textImeMultiLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:textSize="10pt"
         android:fontFamily="sans-serif-light"
         android:textColor="@android:color/black"
-        android:padding="20dp"/>
+        android:padding="10dp"/>
 
     <TextView
         android:text="Toppings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:textSize="10pt"
         android:fontFamily="sans-serif-light"
         android:textColor="@android:color/black"
         android:background="@android:color/transparent"
-        android:padding="10dp"/>
+        android:padding="5dp"/>
 
     <CheckBox
+        android:id="@+id/whipped_cream_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Whipped Cream"
-        android:textSize="20sp"/>
+        android:textSize="7pt"/>
 
     <CheckBox
+        android:id="@+id/chocolate_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Chocolate"
-        android:textSize="20sp"/>
+        android:textSize="7pt"/>
 
     <TextView
         android:text="Quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:textSize="10pt"
         android:fontFamily="sans-serif-light"
         android:textColor="@android:color/black"
         android:background="@android:color/transparent"
-        android:padding="10dp"/>
+        android:padding="5dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -61,13 +64,15 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:text="-"
-            android:textSize="20sp"/>
+            android:textSize="10pt"
+            android:onClick="decreamentquantity"/>
 
         <TextView
-            android:text="2"
+            android:id="@+id/quantity_text_view"
+            android:text="0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
+            android:textSize="10pt"
             android:fontFamily="sans-serif-light"
             android:textColor="@android:color/black"
             android:background="@android:color/transparent"
@@ -77,35 +82,188 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:text="+"
-            android:textSize="20sp"/>
+            android:textSize="10pt"
+            android:onClick="increamentquantity"/>
 
     </LinearLayout>
 
+    <!--
     <TextView
         android:text="Order Summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:textSize="10pt"
         android:fontFamily="sans-serif-light"
         android:textColor="@android:color/black"
         android:background="@android:color/transparent"
-        android:padding="10dp"/>
+        android:padding="5dp"/>
 
-    <TextView
-        android:text="$10"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Nama : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:padding="3dp"/>
+
+        <TextView
+            android:text="Budi"
+            android:id="@+id/show_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:padding="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Add Whipped Cream : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:padding="3dp"/>
+
+        <TextView
+            android:text="true"
+            android:id="@+id/show_whipped"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:padding="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Add Chocolate : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:padding="3dp"/>
+
+        <TextView
+            android:text="true"
+            android:id="@+id/show_chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:padding="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Quantity : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:padding="3dp"/>
+
+        <TextView
+            android:text="0"
+            android:id="@+id/show_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:padding="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Total : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:padding="3dp"/>
+
+        <TextView
+            android:text="0"
+            android:id="@+id/show_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="7pt"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:padding="3dp"/>
+    </LinearLayout>
+    -->
+
+    <!--
+    <TextView
+        android:text="Thank You !"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10pt"
         android:fontFamily="sans-serif-light"
         android:textColor="@android:color/black"
         android:background="@android:color/transparent"
-        android:padding="10dp"/>
+        android:padding="5dp"/>
+        -->
+
+    <TextView
+        android:text=""
+        android:id="@+id/price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="7pt"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:padding="3dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Order"
         android:textStyle="bold"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:onClick="submitOrder"/>
 
 </LinearLayout>
